@@ -1,74 +1,42 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 
-# -------------------------
-# DATOS SIMULADOS
-# -------------------------
+# LEER CSV
+df = pd.read_csv("data/dataset_prediccion_escolar.csv")
 
-datos = {
-    "promedio": [95, 70, 50, 85, 40, 60, 90, 30, 75, 55],
-    "asistencia": [95, 80, 60, 90, 50, 70, 98, 40, 85, 65],
-    "riesgo": [
-        "Bajo",
-        "Medio",
-        "Alto",
-        "Bajo",
-        "Alto",
-        "Medio",
-        "Bajo",
-        "Alto",
-        "Medio",
-        "Alto"
-    ]
-}
+# MOSTRAR PRIMERAS FILAS
+print(df.head())
 
-df = pd.DataFrame(datos)
+# VARIABLES DE ENTRADA
+X = df[[
+    "Asistencia (%)",
+    "Tareas",
+    "Parcial 1",
+    "Parcial 2",
+    "Parcial 3",
+    "Promedio Final"
+]]
 
-# -------------------------
-# VARIABLES
-# -------------------------
+# VARIABLE OBJETIVO
+y = df["Nivel de Riesgo"]
 
-X = df[["promedio", "asistencia"]]
-y = df["riesgo"]
-
-# -------------------------
-# DIVIDIR DATOS
-# -------------------------
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-# -------------------------
-# MODELO
-# -------------------------
-
+# CREAR MODELO
 modelo = DecisionTreeClassifier()
 
-modelo.fit(X_train, y_train)
+# ENTRENAR
+modelo.fit(X, y)
 
-# -------------------------
-# PREDICCIONES
-# -------------------------
-
-predicciones = modelo.predict(X_test)
-
-# -------------------------
-# PRECISIÓN
-# -------------------------
-
-precision = accuracy_score(y_test, predicciones)
-
-print("Precisión del modelo:", precision)
-
-# -------------------------
 # NUEVO ESTUDIANTE
-# -------------------------
+nuevo_estudiante = pd.DataFrame([{
+    "Asistencia (%)": 85,
+    "Tareas": 80,
+    "Parcial 1": 70,
+    "Parcial 2": 75,
+    "Parcial 3": 90,
+    "Promedio Final": 78
+}])
 
-nuevo_estudiante = [[65, 70]]
-
+# PREDICCIÓN
 resultado = modelo.predict(nuevo_estudiante)
 
-print("Nivel de riesgo:", resultado[0])
+print("Nivel de riesgo predicho:", resultado[0])

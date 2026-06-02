@@ -4,7 +4,7 @@ from sklearn.tree import DecisionTreeClassifier
 # LEER CSV
 df = pd.read_csv("data/dataset_prediccion_escolar.csv")
 
-# MOSTRAR PRIMERAS FILAS
+print("\n=== DATOS CARGADOS ===")
 print(df.head())
 
 print("\nCantidad de estudiantes:", len(df))
@@ -31,8 +31,10 @@ modelo = DecisionTreeClassifier()
 # ENTRENAR
 modelo.fit(X, y)
 
-# NUEVO ESTUDIANTE
-nuevo_estudiante = pd.DataFrame([{
+# NUEVOS ESTUDIANTES
+nuevos_estudiantes = pd.DataFrame([
+{
+    "Nombre": "Alumno Excelente",
     "Asistencia (%)": 95,
     "Tareas": 90,
     "Parcial 1": 92,
@@ -41,6 +43,7 @@ nuevo_estudiante = pd.DataFrame([{
     "Promedio Final": 92
 },
 {
+    "Nombre": "Alumno Regular",
     "Asistencia (%)": 80,
     "Tareas": 75,
     "Parcial 1": 70,
@@ -49,6 +52,7 @@ nuevo_estudiante = pd.DataFrame([{
     "Promedio Final": 75
 },
 {
+    "Nombre": "Alumno Riesgo",
     "Asistencia (%)": 55,
     "Tareas": 50,
     "Parcial 1": 45,
@@ -56,13 +60,42 @@ nuevo_estudiante = pd.DataFrame([{
     "Parcial 3": 40,
     "Promedio Final": 48
 }
-
 ])
 
+# SOLO LAS VARIABLES DEL MODELO
+datos_prediccion = nuevos_estudiantes[[
+    "Asistencia (%)",
+    "Tareas",
+    "Parcial 1",
+    "Parcial 2",
+    "Parcial 3",
+    "Promedio Final"
+]]
+
 # PREDICCIÓN
-resultados = modelo.predict(nuevo_estudiante)
+resultados = modelo.predict(datos_prediccion)
 
-print("\nRESULTADOS:")
+# AGREGAR RESULTADO A LA TABLA
+nuevos_estudiantes["Riesgo Predicho"] = resultados
 
-for i, riesgo in enumerate(resultados):
-    print(f"Estidiante {i+1}: {riesgo}")
+def semaforo(riesgo):
+    if riesgo == "Bajo":
+        return "🟢 Bajo"
+    elif riesgo == "Medio":
+        return "🟡 Medio"
+    else:
+        return "🔴 Alto"
+
+nuevos_estudiantes["Nivel Visual"] = (
+    nuevos_estudiantes["Riesgo Predicho"]
+    .apply(semaforo)
+)
+
+print("\n=== REPORTE FINAL ===")
+
+print(nuevos_estudiantes[[
+    "Asistencia (%)",
+    "Tareas",
+    "Promedio Final",
+    "Nivel Visual"
+]])

@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    min-height:100vh;
+    background:#050b23;
+    color:white;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:280px;
+    background:#07122f;
+    padding:30px;
+    border-right:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo img{
+    width:80px;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:#32d7ff;
+}
+
+.logo p{
+    color:#9aa5c3;
+    font-size:14px;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#18295e;
+}
+
+.active{
+    background:linear-gradient(
+        90deg,
+        #7f5af0,
+        #ff4fa3
+    );
+}
+
+/* CONTENIDO */
+
+.contenido{
+    flex:1;
+    padding:40px;
+}
+
+header h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#a9b4d0;
+    margin-bottom:40px;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#09183d;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.card h3{
+    color:#a9b4d0;
+    margin-bottom:15px;
+}
+
+.card span{
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* PANEL */
+
+.panel{
+    background:#09183d;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.panel h2{
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:15px;
+    text-align:left;
+}
+
+thead{
+    background:#0d214f;
+}
+
+tbody tr{
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+tbody tr:hover{
+    background:#11275b;
+}

@@ -11,7 +11,12 @@
 
 <div class="contenedor">
 
+    <!-- Menú lateral -->
     <aside class="sidebar">
+
+        <div class="logo">
+            <img src="../assets/Logo2.png" alt="Logo del Sistema">
+        </div>
 
         <h2>DIRECTOR</h2>
 
@@ -25,14 +30,36 @@
 
     </aside>
 
+    <!-- Contenido principal -->
     <main class="contenido">
 
         <header>
-            <h1>Lista de Alumnos</h1>
-            <p>Consulta general de estudiantes</p>
+            <h1>Gestión de Alumnos</h1>
+            <p>Consulta y seguimiento de estudiantes</p>
         </header>
 
         <section class="riesgo">
+
+            <div class="filtros">
+
+                <input type="text"
+                       placeholder="Buscar alumno..."
+                       class="buscador">
+
+                <select>
+                    <option>Todos los grados</option>
+                    <option>1°</option>
+                    <option>2°</option>
+                    <option>3°</option>
+                </select>
+
+                <select>
+                    <option>Todos los grupos</option>
+                    <option>A</option>
+                    <option>B</option>
+                </select>
+
+            </div>
 
             <table>
 
@@ -42,7 +69,10 @@
                         <th>Nombre</th>
                         <th>Grado</th>
                         <th>Grupo</th>
+                        <th>Promedio</th>
+                        <th>Faltas</th>
                         <th>Riesgo</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
 
@@ -53,7 +83,10 @@
                         <td>Juan Pérez</td>
                         <td>1°</td>
                         <td>A</td>
-                        <td>Alto</td>
+                        <td>6.2</td>
+                        <td>15</td>
+                        <td>🔴 Alto</td>
+                        <td><button>Ver</button></td>
                     </tr>
 
                     <tr>
@@ -61,7 +94,10 @@
                         <td>Ana López</td>
                         <td>2°</td>
                         <td>B</td>
-                        <td>Medio</td>
+                        <td>8.5</td>
+                        <td>3</td>
+                        <td>🟢 Bajo</td>
+                        <td><button>Ver</button></td>
                     </tr>
 
                     <tr>
@@ -69,7 +105,32 @@
                         <td>Carlos Ruiz</td>
                         <td>3°</td>
                         <td>A</td>
-                        <td>Bajo</td>
+                        <td>7.4</td>
+                        <td>7</td>
+                        <td>🟡 Medio</td>
+                        <td><button>Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>2025004</td>
+                        <td>María Hernández</td>
+                        <td>1°</td>
+                        <td>B</td>
+                        <td>9.2</td>
+                        <td>1</td>
+                        <td>🟢 Bajo</td>
+                        <td><button>Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>2025005</td>
+                        <td>Pedro García</td>
+                        <td>2°</td>
+                        <td>A</td>
+                        <td>6.8</td>
+                        <td>12</td>
+                        <td>🔴 Alto</td>
+                        <td><button>Ver</button></td>
                     </tr>
 
                 </tbody>

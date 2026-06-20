@@ -143,3 +143,32 @@ tbody tr{
 tbody tr:hover{
     background:#11275b;
 }
+
+button{
+
+background:#7f5af0;
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:12px;
+
+margin-top:20px;
+
+cursor:pointer;
+
+}
+
+
+select{
+
+background:#07122f;
+color:white;
+
+padding:8px;
+
+border-radius:8px;
+
+}

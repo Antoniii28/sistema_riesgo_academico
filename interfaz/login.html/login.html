@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDUNEXIS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#05010a;
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:linear-gradient(
+        45deg,
+        #00ffff,
+        #0055ff,
+        #8a2be2,
+        #ff00ff
+    );
+    filter:blur(100px);
+    opacity:.25;
+    animation:fondo 8s linear infinite;
+}
+
+@keyframes fondo{
+    0%{
+        transform:translate(0,0) rotate(0deg);
+    }
+    50%{
+        transform:translate(-20%,-20%) rotate(180deg);
+    }
+    100%{
+        transform:translate(0,0) rotate(360deg);
+    }
+}
+
+
+.box{
+    position:relative;
+    width:500px;
+    padding:50px;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    border:1px solid #00ffff;
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #ff00ff;
+    text-align:center;
+    z-index:1;
+}
+
+
+h1{
+    color:white;
+    font-size:60px;
+    font-weight:bold;
+    letter-spacing:6px;
+    margin-bottom:30px;
+    text-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #00ffff,
+        0 0 60px #ff00ff;
+}
+
+h2{
+    color:white;
+    margin-bottom:25px;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #ff00ff;
+}
+
+
+input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#111;
+    color:#00ffff;
+    border:1px solid #00ffff;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#89ffff;
+}
+
+input:focus{
+    outline:none;
+    transform:scale(1.02);
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 25px #ff00ff;
+}
+
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(
+        90deg,
+        #00ffff,
+        #0066ff,
+        #ff00ff
+    );
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #ff00ff;
+}
+
+
+.switch{
+    margin-top:15px;
+    color:#00ffff;
+    cursor:pointer;
+    font-size:14px;
+    text-shadow:0 0 10px #00ffff;
+    transition:.3s;
+}
+
+.switch:hover{
+    color:#ff00ff;
+}
+
+.hidden{
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>EDUNEXIS</h1>
+
+
+    <div id="rolesSection">
+
+        <h2>Selecciona tu rol</h2>
+
+        <button onclick="mostrarLogin('docente')">
+            👨‍🏫 Docente
+        </button>
+
+        <button onclick="mostrarLogin('director')">
+            🏢 Director
+        </button>
+
+    </div>
+
+   
+    <div id="loginSection" class="hidden">
+
+        <h2 id="rolSeleccionado"></h2>
+
+        <input type="text" placeholder="Usuario">
+
+        <input type="password" placeholder="Contraseña">
+
+        <div class="switch" onclick="recuperarPassword()">
+            ¿Olvidaste tu contraseña?
+        </div>
+
+        <button onclick="ingresar()">
+            Ingresar
+        </button>
+
+        <div class="switch" onclick="volverRoles()">
+            ← Cambiar rol
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+let rolActual = "";
+
+function mostrarLogin(rol){
+
+    rolActual = rol;
+
+    document.getElementById("rolesSection")
+    .classList.add("hidden");
+
+    document.getElementById("loginSection")
+    .classList.remove("hidden");
+
+    if(rol === "docente"){
+        document.getElementById("rolSeleccionado")
+        .innerText = "👨‍🏫 Portal Docente";
+    }else{
+        document.getElementById("rolSeleccionado")
+        .innerText = "🏢 Portal Director";
+    }
+}
+
+function volverRoles(){
+
+    document.getElementById("loginSection")
+    .classList.add("hidden");
+
+    document.getElementById("rolesSection")
+    .classList.remove("hidden");
+}
+
+function recuperarPassword(){
+
+    alert("Función de recuperación de contraseña.");
+}
+
+function ingresar(){
+
+    if(rolActual === "docente"){
+        alert("Bienvenido al Portal Docente");
+        // window.location.href = "docente.html";
+    }
+
+    if(rolActual === "director"){
+        alert("Bienvenido al Portal Director");
+        // window.location.href = "director.html";
+    }
+}
+
+</script>
+
+</body>
+</html>

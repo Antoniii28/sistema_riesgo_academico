@@ -1,162 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduNexis - Docente</title>
-
-    <link rel="stylesheet" href="docente.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EduNexis — Docente</title>
+<link rel="stylesheet" href="docente.css">
 </head>
-
 <body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">◆<span>◆</span></div>
+      <div class="brand-name">EduNexis</div>
+      <div class="brand-sub">Telesecundaria</div>
+    </div>
+    <nav id="sidebarNav"></nav>
+    <div class="sidebar-bottom">
+      <button class="user-card" id="userMenuBtn">
+        <span class="avatar teal">JP</span><span><b>Juan Pérez</b><small>Docente</small></span><span class="chev">⌄</span>
+      </button>
+      <button class="logout" data-action="logout">↪ <span>Cerrar sesión</span></button>
+    </div>
+  </aside>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="date-chip">▣ &nbsp; 21 de mayo de 2026</div>
+    </header>
+    <section id="page" class="page"></section>
+  </main>
+</div>
 
-        <div class="logo">
-            <img src="../assets/Logo2.png" alt="Logo">
-            <h2>EduNexis</h2>
-            <p>Sistema Inteligente Escolar</p>
-        </div>
-
-        <nav>
-
-            <a href="#" class="active">
-                Dashboard
-            </a>
-
-            <a href="#">
-                Asistencia
-            </a>
-
-            <a href="#">
-                Calificaciones
-            </a>
-
-            <a href="#">
-                Estudiantes
-            </a>
-
-            <a href="#">
-                Reportes
-            </a>
-
-            <a href="#">
-                Riesgo Académico
-            </a>
-
-        </nav>
-
-    </aside>
-
-    <!-- CONTENIDO -->
-    <main class="contenido">
-
-        <header>
-            <h1>DASHBOARD</h1>
-            <p>Panel de control del docente</p>
-        </header>
-
-        <!-- TARJETAS -->
-        <section class="cards">
-
-            <div class="card">
-                <h3>Alumnos</h3>
-                <span>28</span>
-            </div>
-
-            <div class="card">
-                <h3>Grupos</h3>
-                <span>3</span>
-            </div>
-
-            <div class="card">
-                <h3>En Riesgo</h3>
-                <span>5</span>
-            </div>
-
-            <div class="card">
-                <h3>Promedio</h3>
-                <span>8.4</span>
-            </div>
-
-        </section>
-        
-
-        <!-- ALUMNOS EN RIESGO -->
-        <section class="panel">
-
-            <h2>Alumnos en Riesgo</h2>
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Grupo</th>
-                        <th>Riesgo</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Ana López</td>
-                        <td>2°B</td>
-                        <td>Alto</td>
-                    </tr>
-
-                    <tr>
-                        <td>María García</td>
-                        <td>1°C</td>
-                        <td>Medio</td>
-                    </tr>
-
-                    <tr>
-                        <td>Sofía Martínez</td>
-                        <td>3°A</td>
-                        <td>Medio</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-                </section>
-
-        <!-- PASE DE LISTA -->
-        <section class="panel">
-
-            <h2>Pase de Lista</h2>
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Alumno</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tabla-alumnos">
-
-                </tbody>
-
-            </table>
-
-            <button id="guardar">
-                Guardar Asistencia
-            </button>
-
-        </section>
-
-    </main>
-
-    <script src="docente.js"></script>
-
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+<script src="docente.js"></script>
 </body>
-
 </html>

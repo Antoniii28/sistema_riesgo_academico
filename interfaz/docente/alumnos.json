@@ -1,14 +1,236 @@
 [
-    {
-        "nombre": "Juan Pérez"
-    },
-    {
-        "nombre": "María López"
-    },
-    {
-        "nombre": "Carlos García"
-    },
-    {
-        "nombre": "Ana Torres"
-    }
+  {
+    "matricula": "2431128023",
+    "nombre": "Chavez Francisco Yareth Neftali",
+    "grupo": "5° F",
+    "asesor": "Máxima Sánchez Cuatletta",
+    "asistencia": 77,
+    "tareas": 76,
+    "p1": 82,
+    "p2": 82,
+    "p3": 67,
+    "promedio": 76.7,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128048",
+    "nombre": "Flores Cuamatzi Jose Antonio",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 85,
+    "tareas": 75,
+    "p1": 69,
+    "p2": 82,
+    "p3": 68,
+    "promedio": 74.6,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128067",
+    "nombre": "Galicia Netzahual Gerardo Asaf",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 77,
+    "tareas": 71,
+    "p1": 51,
+    "p2": 91,
+    "p3": 62,
+    "promedio": 69.4,
+    "riesgo": "Alto"
+  },
+  {
+    "matricula": "2431128004",
+    "nombre": "Garcia Jarquin Jesus Adrian",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 91,
+    "tareas": 68,
+    "p1": 56,
+    "p2": 67,
+    "p3": 88,
+    "promedio": 72.1,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128020",
+    "nombre": "Garcia Meneses Gabriela Lizzeth",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 85,
+    "tareas": 93,
+    "p1": 77,
+    "p2": 60,
+    "p3": 57,
+    "promedio": 72.3,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128068",
+    "nombre": "Garduño Luna Liliana",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 73,
+    "tareas": 88,
+    "p1": 85,
+    "p2": 92,
+    "p3": 84,
+    "promedio": 85.8,
+    "riesgo": "Bajo"
+  },
+  {
+    "matricula": "2431128049",
+    "nombre": "Gomez Cuatepotzo Alondra",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 92,
+    "tareas": 91,
+    "p1": 92,
+    "p2": 67,
+    "p3": 66,
+    "promedio": 79.8,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128051",
+    "nombre": "Hernas Cuatepitzl Air",
+    "grupo": "5° F",
+    "asesor": "Paola Xochicale Beciez",
+    "asistencia": 92,
+    "tareas": 61,
+    "p1": 80,
+    "p2": 59,
+    "p3": 59,
+    "promedio": 67.5,
+    "riesgo": "Alto"
+  },
+  {
+    "matricula": "2431128071",
+    "nombre": "Lima Perez Bruno Santiago",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 95,
+    "tareas": 87,
+    "p1": 72,
+    "p2": 97,
+    "p3": 51,
+    "promedio": 78.0,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128031",
+    "nombre": "Macias Gonzalez Jimena",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 77,
+    "tareas": 84,
+    "p1": 67,
+    "p2": 100,
+    "p3": 79,
+    "promedio": 81.9,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128056",
+    "nombre": "Osorio Galicia Luis Angel",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 92,
+    "tareas": 60,
+    "p1": 59,
+    "p2": 53,
+    "p3": 68,
+    "promedio": 63.3,
+    "riesgo": "Alto"
+  },
+  {
+    "matricula": "2431128081",
+    "nombre": "Paredes Vazquez Marco Antonio",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 100,
+    "tareas": 79,
+    "p1": 88,
+    "p2": 51,
+    "p3": 84,
+    "promedio": 77.9,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128016",
+    "nombre": "Rodriguez Cuchillo Carlos",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 70,
+    "tareas": 85,
+    "p1": 56,
+    "p2": 92,
+    "p3": 62,
+    "promedio": 72.9,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128036",
+    "nombre": "Saldaña Vazquez Kenneth",
+    "grupo": "5° F",
+    "asesor": "Patricia Hernandez Cruz",
+    "asistencia": 75,
+    "tareas": 72,
+    "p1": 58,
+    "p2": 84,
+    "p3": 88,
+    "promedio": 75.7,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128038",
+    "nombre": "Temoltzi Galicia Grissel Guadalupe",
+    "grupo": "5° F",
+    "asesor": "Saul Olaf Loaiza Melendez",
+    "asistencia": 76,
+    "tareas": 96,
+    "p1": 82,
+    "p2": 74,
+    "p3": 78,
+    "promedio": 81.4,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128040",
+    "nombre": "Uribe Garcia Carol",
+    "grupo": "5° F",
+    "asesor": "Saul Olaf Loaiza Melendez",
+    "asistencia": 80,
+    "tareas": 72,
+    "p1": 69,
+    "p2": 70,
+    "p3": 91,
+    "promedio": 76.2,
+    "riesgo": "Medio"
+  },
+  {
+    "matricula": "2431128064",
+    "nombre": "Zepeda Cuahutencos Brayan",
+    "grupo": "5° F",
+    "asesor": "Saul Olaf Loaiza Melendez",
+    "asistencia": 94,
+    "tareas": 82,
+    "p1": 57,
+    "p2": 52,
+    "p3": 67,
+    "promedio": 67.0,
+    "riesgo": "Alto"
+  },
+  {
+    "matricula": "2431128063",
+    "nombre": "Zepeda Estrada Yael",
+    "grupo": "5° F",
+    "asesor": "Saul Olaf Loaiza Melendez",
+    "asistencia": 92,
+    "tareas": 71,
+    "p1": 54,
+    "p2": 79,
+    "p3": 78,
+    "promedio": 72.7,
+    "riesgo": "Medio"
+  }
 ]

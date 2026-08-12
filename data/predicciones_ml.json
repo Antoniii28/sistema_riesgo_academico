@@ -1,0 +1,450 @@
+{
+  "modelo": {
+    "nombre": "Random Forest Classifier",
+    "version": "1.0-prototipo",
+    "variables_entrada": [
+      "Asistencia (%)",
+      "Tareas",
+      "Parcial 1",
+      "Parcial 2",
+      "Parcial 3"
+    ],
+    "variable_objetivo": "Nivel de Riesgo",
+    "n_registros": 18,
+    "clases": [
+      "Alto",
+      "Bajo",
+      "Medio"
+    ],
+    "importancia_variables": [
+      {
+        "variable": "Parcial 2",
+        "importancia": 0.231009,
+        "porcentaje": 23.1
+      },
+      {
+        "variable": "Tareas",
+        "importancia": 0.229113,
+        "porcentaje": 22.91
+      },
+      {
+        "variable": "Parcial 1",
+        "importancia": 0.198213,
+        "porcentaje": 19.82
+      },
+      {
+        "variable": "Asistencia (%)",
+        "importancia": 0.17119,
+        "porcentaje": 17.12
+      },
+      {
+        "variable": "Parcial 3",
+        "importancia": 0.170475,
+        "porcentaje": 17.05
+      }
+    ],
+    "evaluacion": {
+      "metodo": "Leave-One-Out Cross-Validation",
+      "accuracy": 0.7778,
+      "balanced_accuracy": 0.4167,
+      "f1_macro": 0.4222,
+      "reporte": {
+        "Alto": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1-score": 0.4,
+          "support": 4.0
+        },
+        "Bajo": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "Medio": {
+          "precision": 0.7647058823529411,
+          "recall": 1.0,
+          "f1-score": 0.8666666666666667,
+          "support": 13.0
+        },
+        "accuracy": 0.7777777777777778,
+        "macro avg": {
+          "precision": 0.5882352941176471,
+          "recall": 0.4166666666666667,
+          "f1-score": 0.4222222222222222,
+          "support": 18.0
+        },
+        "weighted avg": {
+          "precision": 0.7745098039215687,
+          "recall": 0.7777777777777778,
+          "f1-score": 0.7148148148148148,
+          "support": 18.0
+        }
+      },
+      "advertencia": "El dataset es pequeño (18 registros) y la clase Bajo tiene un solo ejemplo; estas métricas son orientativas para el prototipo."
+    },
+    "nota": "Datos simulados para fines académicos. No son datos institucionales reales."
+  },
+  "predicciones": [
+    {
+      "matricula": "2431128023",
+      "nombre": "Chavez Francisco Yareth Neftali",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 81.31,
+      "probabilidades": {
+        "Alto": 15.75,
+        "Bajo": 2.93,
+        "Medio": 81.31
+      },
+      "variables": {
+        "asistencia": 77.0,
+        "tareas": 76.0,
+        "parcial1": 82.0,
+        "parcial2": 82.0,
+        "parcial3": 67.0,
+        "promedio": 76.7
+      }
+    },
+    {
+      "matricula": "2431128048",
+      "nombre": "Flores Cuamatzi Jose Antonio",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 86.23,
+      "probabilidades": {
+        "Alto": 13.77,
+        "Bajo": 0.0,
+        "Medio": 86.23
+      },
+      "variables": {
+        "asistencia": 85.0,
+        "tareas": 75.0,
+        "parcial1": 69.0,
+        "parcial2": 82.0,
+        "parcial3": 68.0,
+        "promedio": 74.6
+      }
+    },
+    {
+      "matricula": "2431128067",
+      "nombre": "Galicia Netzahual Gerardo Asaf",
+      "grupo": "5° F",
+      "riesgo_predicho": "Alto",
+      "confianza": 59.54,
+      "probabilidades": {
+        "Alto": 59.54,
+        "Bajo": 1.11,
+        "Medio": 39.35
+      },
+      "variables": {
+        "asistencia": 77.0,
+        "tareas": 71.0,
+        "parcial1": 51.0,
+        "parcial2": 91.0,
+        "parcial3": 62.0,
+        "promedio": 69.4
+      }
+    },
+    {
+      "matricula": "2431128004",
+      "nombre": "Garcia Jarquin Jesus Adrian",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 69.24,
+      "probabilidades": {
+        "Alto": 27.17,
+        "Bajo": 3.59,
+        "Medio": 69.24
+      },
+      "variables": {
+        "asistencia": 91.0,
+        "tareas": 68.0,
+        "parcial1": 56.0,
+        "parcial2": 67.0,
+        "parcial3": 88.0,
+        "promedio": 72.1
+      }
+    },
+    {
+      "matricula": "2431128020",
+      "nombre": "Garcia Meneses Gabriela Lizzeth",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 73.89,
+      "probabilidades": {
+        "Alto": 18.6,
+        "Bajo": 7.51,
+        "Medio": 73.89
+      },
+      "variables": {
+        "asistencia": 85.0,
+        "tareas": 93.0,
+        "parcial1": 77.0,
+        "parcial2": 60.0,
+        "parcial3": 57.0,
+        "promedio": 72.3
+      }
+    },
+    {
+      "matricula": "2431128068",
+      "nombre": "Garduño Luna Liliana",
+      "grupo": "5° F",
+      "riesgo_predicho": "Bajo",
+      "confianza": 56.06,
+      "probabilidades": {
+        "Alto": 1.02,
+        "Bajo": 56.06,
+        "Medio": 42.92
+      },
+      "variables": {
+        "asistencia": 73.0,
+        "tareas": 88.0,
+        "parcial1": 85.0,
+        "parcial2": 92.0,
+        "parcial3": 84.0,
+        "promedio": 85.8
+      }
+    },
+    {
+      "matricula": "2431128049",
+      "nombre": "Gomez Cuatepotzo Alondra",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 66.95,
+      "probabilidades": {
+        "Alto": 8.88,
+        "Bajo": 24.17,
+        "Medio": 66.95
+      },
+      "variables": {
+        "asistencia": 92.0,
+        "tareas": 91.0,
+        "parcial1": 92.0,
+        "parcial2": 67.0,
+        "parcial3": 66.0,
+        "promedio": 79.8
+      }
+    },
+    {
+      "matricula": "2431128051",
+      "nombre": "Hernas Cuatepitzl Air",
+      "grupo": "5° F",
+      "riesgo_predicho": "Alto",
+      "confianza": 73.51,
+      "probabilidades": {
+        "Alto": 73.51,
+        "Bajo": 1.26,
+        "Medio": 25.24
+      },
+      "variables": {
+        "asistencia": 92.0,
+        "tareas": 61.0,
+        "parcial1": 80.0,
+        "parcial2": 59.0,
+        "parcial3": 59.0,
+        "promedio": 67.5
+      }
+    },
+    {
+      "matricula": "2431128071",
+      "nombre": "Lima Perez Bruno Santiago",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 74.36,
+      "probabilidades": {
+        "Alto": 15.2,
+        "Bajo": 10.44,
+        "Medio": 74.36
+      },
+      "variables": {
+        "asistencia": 95.0,
+        "tareas": 87.0,
+        "parcial1": 72.0,
+        "parcial2": 97.0,
+        "parcial3": 51.0,
+        "promedio": 78.0
+      }
+    },
+    {
+      "matricula": "2431128031",
+      "nombre": "Macias Gonzalez Jimena",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 86.46,
+      "probabilidades": {
+        "Alto": 3.8,
+        "Bajo": 9.75,
+        "Medio": 86.46
+      },
+      "variables": {
+        "asistencia": 77.0,
+        "tareas": 84.0,
+        "parcial1": 67.0,
+        "parcial2": 100.0,
+        "parcial3": 79.0,
+        "promedio": 81.9
+      }
+    },
+    {
+      "matricula": "2431128056",
+      "nombre": "Osorio Galicia Luis Angel",
+      "grupo": "5° F",
+      "riesgo_predicho": "Alto",
+      "confianza": 82.96,
+      "probabilidades": {
+        "Alto": 82.96,
+        "Bajo": 0.0,
+        "Medio": 17.04
+      },
+      "variables": {
+        "asistencia": 92.0,
+        "tareas": 60.0,
+        "parcial1": 59.0,
+        "parcial2": 53.0,
+        "parcial3": 68.0,
+        "promedio": 63.3
+      }
+    },
+    {
+      "matricula": "2431128081",
+      "nombre": "Paredes Vazquez Marco Antonio",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 55.4,
+      "probabilidades": {
+        "Alto": 24.28,
+        "Bajo": 20.32,
+        "Medio": 55.4
+      },
+      "variables": {
+        "asistencia": 100.0,
+        "tareas": 79.0,
+        "parcial1": 88.0,
+        "parcial2": 51.0,
+        "parcial3": 84.0,
+        "promedio": 77.9
+      }
+    },
+    {
+      "matricula": "2431128016",
+      "nombre": "Rodriguez Cuchillo Carlos",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 56.8,
+      "probabilidades": {
+        "Alto": 17.35,
+        "Bajo": 25.85,
+        "Medio": 56.8
+      },
+      "variables": {
+        "asistencia": 70.0,
+        "tareas": 85.0,
+        "parcial1": 56.0,
+        "parcial2": 92.0,
+        "parcial3": 62.0,
+        "promedio": 72.9
+      }
+    },
+    {
+      "matricula": "2431128036",
+      "nombre": "Saldaña Vazquez Kenneth",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 79.14,
+      "probabilidades": {
+        "Alto": 6.88,
+        "Bajo": 13.98,
+        "Medio": 79.14
+      },
+      "variables": {
+        "asistencia": 75.0,
+        "tareas": 72.0,
+        "parcial1": 58.0,
+        "parcial2": 84.0,
+        "parcial3": 88.0,
+        "promedio": 75.7
+      }
+    },
+    {
+      "matricula": "2431128038",
+      "nombre": "Temoltzi Galicia Grissel Guadalupe",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 85.1,
+      "probabilidades": {
+        "Alto": 1.34,
+        "Bajo": 13.56,
+        "Medio": 85.1
+      },
+      "variables": {
+        "asistencia": 76.0,
+        "tareas": 96.0,
+        "parcial1": 82.0,
+        "parcial2": 74.0,
+        "parcial3": 78.0,
+        "promedio": 81.4
+      }
+    },
+    {
+      "matricula": "2431128040",
+      "nombre": "Uribe Garcia Carol",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 91.78,
+      "probabilidades": {
+        "Alto": 4.0,
+        "Bajo": 4.22,
+        "Medio": 91.78
+      },
+      "variables": {
+        "asistencia": 80.0,
+        "tareas": 72.0,
+        "parcial1": 69.0,
+        "parcial2": 70.0,
+        "parcial3": 91.0,
+        "promedio": 76.2
+      }
+    },
+    {
+      "matricula": "2431128064",
+      "nombre": "Zepeda Cuahutencos Brayan",
+      "grupo": "5° F",
+      "riesgo_predicho": "Alto",
+      "confianza": 65.24,
+      "probabilidades": {
+        "Alto": 65.24,
+        "Bajo": 0.0,
+        "Medio": 34.76
+      },
+      "variables": {
+        "asistencia": 94.0,
+        "tareas": 82.0,
+        "parcial1": 57.0,
+        "parcial2": 52.0,
+        "parcial3": 67.0,
+        "promedio": 67.0
+      }
+    },
+    {
+      "matricula": "2431128063",
+      "nombre": "Zepeda Estrada Yael",
+      "grupo": "5° F",
+      "riesgo_predicho": "Medio",
+      "confianza": 67.32,
+      "probabilidades": {
+        "Alto": 32.39,
+        "Bajo": 0.29,
+        "Medio": 67.32
+      },
+      "variables": {
+        "asistencia": 92.0,
+        "tareas": 71.0,
+        "parcial1": 54.0,
+        "parcial2": 79.0,
+        "parcial3": 78.0,
+        "promedio": 72.7
+      }
+    }
+  ]
+}
